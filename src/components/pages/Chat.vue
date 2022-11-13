@@ -65,7 +65,10 @@ export default defineComponent({
   
 
   
-    beforeRouteEnter: (to, from, next) => {
+
+  },
+
+  beforeRouteEnter: (to, from, next) => {
       const auth = getAuth();
       onAuthStateChanged(auth, (user) => {
         if (user) {
@@ -75,8 +78,8 @@ export default defineComponent({
         }
       });
     }
-  }
 })
+
 
 
 </script>
